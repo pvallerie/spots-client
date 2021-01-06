@@ -12,30 +12,54 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Spots</h1>
 
-      <form id="sign-up" class="container">
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="credentials[email]" required>
+      <div class="unauthenticated">
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="credentials[password]" required>
+        <p id="unauthenticated-message"></p>
 
-        <label for="password-confirmation"><b>Password Confirmation</b></label>
-        <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]" required>
+        <form id="sign-up" class="container">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="credentials[email]" required>
 
-        <button type="submit">Create Account</button>
-      </form>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="credentials[password]" required>
 
-      <form id="sign-in" class="container">
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="credentials[email]" required>
+          <label for="password-confirmation"><b>Password Confirmation</b></label>
+          <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]" required>
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="credentials[password]" required>
+          <button type="submit">Create Account</button>
+        </form>
 
-        <button type="submit">Login</button>
-      </form>
+        <form id="sign-in" class="container">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="credentials[email]" required>
+
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="credentials[password]" required>
+
+          <button type="submit">Login</button>
+        </form>
+
+      </div>
+
+      <div class="authenticated">
+
+        <p id="authenticated-message"></p>
+
+        <form id="change-password" class="container">
+          <label for="old-password"><b>Old Password</b></label>
+          <input type="password" placeholder="Old Password" name="passwords[old]" required>
+
+          <label for="new-password"><b>New Password</b></label>
+          <input type="password" placeholder="New Password" name="passwords[new]" required>
+
+          <button type="submit">Change Password</button>
+        </form>
+
+        <button id="sign-out">Sign Out</button>
+
+      </div>
 
     </body>
 </html>
