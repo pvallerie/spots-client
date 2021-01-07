@@ -1,9 +1,8 @@
-curl "https://polar-savannah-31336.herokuapp.com/" \
+curl "https://polar-savannah-31336.herokuapp.com/change-password" \
 --include \
 --request PATCH \
 --header "Authorization: Bearer ${TOKEN}" \
 --header "Content-Type: application/json" \
---data ''
 --data '{
   "passwords": {
     "old": "'"${OLDPW}"'"
