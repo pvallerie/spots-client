@@ -1,5 +1,7 @@
 const store = require('./../store')
 
+const clear = require('./../clearing-functions')
+
 const resetForms = function () {
   $('form').trigger('reset')
 }
@@ -15,12 +17,15 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('.unauthenticated').hide()
   $('.authenticated').show()
-  $('.authenticated-hidden').hide()
+  $('#change-password-form').hide()
+  $('#new-spot-form').hide()
+  $('#update-spot-form').hide()
   $('#authenticated-message').text('Signed in!')
   resetForms()
 }
 
 const onSignOutSuccess = function () {
+  clear.clearSpotContainers()
   $('.authenticated').hide()
   $('.unauthenticated').show()
   $('#unauthenticated-message').text('Signed out!')
@@ -28,6 +33,7 @@ const onSignOutSuccess = function () {
 }
 
 const onChangePasswordSuccess = function (response) {
+  $('#change-password-form').hide()
   $('#authenticated-message').text('Password changed successfully!')
   resetForms()
 }

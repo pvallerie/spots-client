@@ -47,16 +47,6 @@
 
         <p id="authenticated-message"></p>
 
-        <form id="change-password" class="container">
-          <label for="old-password"><b>Old Password</b></label>
-          <input type="password" placeholder="Old Password" name="passwords[old]" required>
-
-          <label for="new-password"><b>New Password</b></label>
-          <input type="password" placeholder="New Password" name="passwords[new]" required>
-
-          <button type="submit">Change Password</button>
-        </form>
-
         <button id="show-all-spots">All</button>
 
         <button id="show-seen-spots">Seen</button>
@@ -67,7 +57,38 @@
 
         <button id="create-new-spot">New Spot</button>
 
-        <form id="new-spot-form" class="container authenticated-hidden">
+        <button id="update-spot">Update Spot</button>
+
+        <form id="update-spot-form" class="container">
+          <label for="spot-id"><b>Spot ID</b></label>
+          <input type="text" placeholder="Spot ID" name="spot[_id]" required>
+
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Name" name="spot[name]">
+
+          <label for="location"><b>Location</b></label>
+          <input type="text" placeholder="Location" name="spot[location]">
+
+          <label for="notes"><b>Notes</b></label>
+          <input type="text" placeholder="Notes" name="spot[notes]">
+
+          <label for="seen"><b>Seen</b></label>
+          <input type="checkbox" value="true" placeholder="Seen" name="spot[seen]">
+
+          <label for="unseen"><b>Unseen</b></label>
+          <input type="checkbox" value="false" placeholder="Seen" name="spot[seen]">
+
+          <button type="submit">Update</button>
+        </form>
+
+        <form id="delete-spot-form" class="container">
+          <label for="spot-id"><b>Spot ID</b></label>
+          <input type="text" placeholder="Spot ID" name="spot[_id]" required>
+
+          <button type="submit">Delete</button>
+        </form>
+
+        <form id="new-spot-form" class="container">
           <label for="name"><b>Name</b></label>
           <input type="text" placeholder="Name" name="spot[name]" required>
 
@@ -91,6 +112,18 @@
         <div id="seen"></div>
 
         <div id="unseen"></div>
+
+        <button id="change-password">Change Password</button>
+
+        <form id="change-password-form" class="container">
+          <label for="old-password"><b>Old Password</b></label>
+          <input type="password" placeholder="Old Password" name="passwords[old]" required>
+
+          <label for="new-password"><b>New Password</b></label>
+          <input type="password" placeholder="New Password" name="passwords[new]" required>
+
+          <button type="submit">Change Password</button>
+        </form>
 
       </div>
 

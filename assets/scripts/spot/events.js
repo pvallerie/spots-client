@@ -19,16 +19,41 @@ const onShowAllSpots = function (event) {
     .then(ui.onShowAllSpotsError)
 }
 
-const onShowSeenSpots = function (event) {
+// const onShowSeenSpots = function (event) {
+//   event.preventDefault()
+//   api.showAllSpots()
+//     .then(ui.onShowSeenSpotsSuccess)
+//     .then(ui.onShowSeenSpotsError)
+// }
+
+// const onShowUnseenSpots = function (event) {
+//   event.preventDefault()
+//   api.showAllSpots()
+//     .then(ui.onShowUnseenSpotsSuccess)
+//     .then(ui.onShowUnseenSpotsError)
+// }
+
+const onDeleteSpot = function (event) {
   event.preventDefault()
-  api.showAllSpots()
-    .then(ui.onShowSeenSpotsSuccess)
-    .then(ui.onShowSeenSpotsError)
+  const data = getFormFields(event.target)
+  console.log(data.spot._id)
+  api.deleteSpot(data)
+    .then(ui.onDeleteSpotSuccess)
+    .then(ui.onDeleteSpotError)
+}
+
+const onUpdateSpot = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updateSpot(data)
+    .then(ui.onUpdateSpotSuccess)
+    .then(ui.onUpdateSpotError)
 }
 
 module.exports = {
   // onNewSpot,
   onCreateNewSpot,
   onShowAllSpots,
-  onShowSeenSpots
+  onDeleteSpot,
+  onUpdateSpot
 }
