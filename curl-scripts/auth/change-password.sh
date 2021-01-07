@@ -5,7 +5,9 @@ curl "https://polar-savannah-31336.herokuapp.com/change-password" \
 --header "Content-Type: application/json" \
 --data '{
   "passwords": {
-    "old": "'"${OLDPW}"'"
+    "old": "'"${OLDPW}"'",
     "new": "'"${NEWPW}"'"
   }
 }'
+
+echo
