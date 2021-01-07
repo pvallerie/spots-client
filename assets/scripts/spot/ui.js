@@ -35,7 +35,6 @@ const onShowAllSpotsSuccess = function (response) {
 }
 
 const onShowSeenSpotsSuccess = function (response) {
-  response.spots.find({ seen: true }).console.log()
   const allHtmlText = response.spots.map(function (index) {
     return `
         <div class="spot-conatiner">
@@ -46,11 +45,12 @@ const onShowSeenSpotsSuccess = function (response) {
        </div>
     `
   })
+  $('.all').hide()
   $('.seen').show()
   $('.unseen').hide()
-  $('#authenticated-message').text('All spots shown!')
-  console.log(response)
-  $('#all').append(allHtmlText)
+  $('#authenticated-message').text('Seen spots shown!')
+  $('#seen').append(allHtmlText)
+  console.log(response.spots.find({ seen: true }))
   resetForms()
 }
 

@@ -21,7 +21,7 @@ const onShowAllSpots = function (event) {
 
 const onShowSeenSpots = function (event) {
   event.preventDefault()
-  api.showSeenSpots()
+  api.showAllSpots()
     .then(ui.onShowSeenSpotsSuccess)
     .then(ui.onShowSeenSpotsError)
 }
