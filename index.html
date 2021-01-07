@@ -57,21 +57,40 @@
           <button type="submit">Change Password</button>
         </form>
 
-        <button id="sign-out">Sign Out</button>
-
         <button id="show-all-spots">All</button>
 
         <button id="show-seen-spots">Seen</button>
 
         <button id="show-unseen-spots">Unseen</button>
 
+        <button id="sign-out">Sign Out</button>
+
         <button id="create-new-spot">New Spot</button>
 
-        <div class="all"></div>
+        <form id="new-spot-form" class="container authenticated-hidden">
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Name" name="spot[name]" required>
 
-        <div class="seen"></div>
+          <label for="location"><b>Location</b></label>
+          <input type="text" placeholder="Location" name="spot[location]" required>
 
-        <div class="unseen"></div>
+          <label for="notes"><b>Notes</b></label>
+          <input type="text" placeholder="Notes" name="spot[notes]" required>
+
+          <label for="seen"><b>Seen</b></label>
+          <input type="checkbox" value="true" placeholder="Seen" name="spot[seen]">
+
+          <label for="unseen"><b>Unseen</b></label>
+          <input type="checkbox" value="false" placeholder="Seen" name="spot[seen]">
+
+          <button type="submit">Create</button>
+        </form>
+
+        <div id="all"></div>
+
+        <div id="seen"></div>
+
+        <div id="unseen"></div>
 
       </div>
 
