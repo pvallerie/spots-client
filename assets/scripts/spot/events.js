@@ -19,19 +19,19 @@ const onShowAllSpots = function (event) {
     .then(ui.onShowAllSpotsError)
 }
 
-// const onShowSeenSpots = function (event) {
-//   event.preventDefault()
-//   api.showAllSpots()
-//     .then(ui.onShowSeenSpotsSuccess)
-//     .then(ui.onShowSeenSpotsError)
-// }
+const onShowSeenSpots = function (event) {
+  event.preventDefault()
+  api.showAllSpots()
+    .then(ui.onShowSeenSpotsSuccess)
+    .then(ui.onShowSeenSpotsError)
+}
 
-// const onShowUnseenSpots = function (event) {
-//   event.preventDefault()
-//   api.showAllSpots()
-//     .then(ui.onShowUnseenSpotsSuccess)
-//     .then(ui.onShowUnseenSpotsError)
-// }
+const onShowUnseenSpots = function (event) {
+  event.preventDefault()
+  api.showAllSpots()
+    .then(ui.onShowUnseenSpotsSuccess)
+    .then(ui.onShowUnseenSpotsError)
+}
 
 const onDeleteSpot = function (event) {
   event.preventDefault()
@@ -54,6 +54,8 @@ module.exports = {
   // onNewSpot,
   onCreateNewSpot,
   onShowAllSpots,
+  onShowSeenSpots,
+  onShowUnseenSpots,
   onDeleteSpot,
   onUpdateSpot
 }
