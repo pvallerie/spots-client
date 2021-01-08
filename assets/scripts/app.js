@@ -10,10 +10,20 @@ const spotEvents = require('./spot/events')
 
 $(() => {
   $('.authenticated').hide()
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
 
   // auth:
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#sign-up').on('click', () => {
+    $('#sign-up-form').toggle()
+    $('#sign-in-form').hide()
+  })
+  $('#sign-in').on('click', () => {
+    $('#sign-in-form').toggle()
+    $('#sign-up-form').hide()
+  })
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('click', () => $('#change-password-form').toggle())
   $('#change-password-form').on('submit', authEvents.onChangePassword)

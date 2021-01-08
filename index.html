@@ -18,6 +18,11 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light" id="unauthenticated-nav">
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" id="sign-up" class="nav-item nav-link">Create Account</a>
+                    <a href="#" id="sign-in" class="nav-item nav-link">Sign In</a>
+                </div>
+
                 <a href="#" class="navbar-brand logo">
                     <img src="/examples/images/logo.svg" height="28" alt="CoolBrand">
                 </a>
@@ -27,7 +32,7 @@
 
         <p id="unauthenticated-message"></p>
 
-        <form id="sign-up" class="container">
+        <form id="sign-up-form" class="container">
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="credentials[email]" required>
 
@@ -40,7 +45,7 @@
           <button type="submit">Create Account</button>
         </form>
 
-        <form id="sign-in" class="container">
+        <form id="sign-in-form" class="container">
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="credentials[email]" required>
 
