@@ -1,12 +1,63 @@
 @import '~bootstrap/scss/bootstrap';
+@import 'variables.scss';
 
 #unauthenticated-nav {
   height: 50px;
 }
 
+// .nav {
+//   background-color: $nav-color !important;
+// }
+
+// #sign-up {
+//   color: white;
+// }
+//
+// #sign-in {
+//   color: white;
+// }
+//
+// #sign-out {
+//   color: white;
+// }
+//
+// #show-all-spots {
+//   color: white;
+// }
+//
+// #show-seen-spots {
+//   color: white;
+// }
+//
+// #show-unseen-spots {
+//   color: white;
+// }
+
 .logo {
   position: absolute;
   left: 45%;
+}
+
+.edit-button {
+color: $button-color;
+border-color: $button-color;
+transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.delete-button {
+color: $button-color;
+border-color: $button-color;
+transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.edit-button:hover {
+  background-color: $button-color;
+  border-color: $button-color;
+}
+
+.delete-button:hover {
+  background-color: $button-color;
+  border-color: $button-color;
 }
 
 .spot-container {
@@ -14,5 +65,14 @@
 }
 
 .spot {
-  border: 1px solid black;
+  border: 2px solid $spot-border-color;
+  border-radius: 0.35rem;
+  padding-top: 0.375rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  // margin-top: 0.375rem;
+  // margin-right: 0.1rem;
+  // margin-bottom: 0.375rem;
+  // margin-left: 0.1rem;
 }

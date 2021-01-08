@@ -15,18 +15,18 @@
 
       <div class="unauthenticated">
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light" id="unauthenticated-nav">
+        <nav class="navbar navbar-expand-md navbar-light bg-light nav" id="unauthenticated-nav">
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
                 <div class="navbar-nav">
                     <a href="#" id="sign-up" class="nav-item nav-link">Create Account</a>
                     <a href="#" id="sign-in" class="nav-item nav-link">Sign In</a>
                 </div>
 
                 <a href="#" class="navbar-brand logo">
-                    <img src="/examples/images/logo.svg" height="28" alt="CoolBrand">
+                    <img src="/examples/images/logo.svg" height="28" alt="SpotsLogo">
                 </a>
-            </div>
+            <!-- </div> -->
 
         </nav>
 
@@ -59,19 +59,19 @@
 
       <div class="authenticated">
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light bg-light nav">
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="#" id="show-all-spots" class="nav-item nav-link">All</a>
-                    <a href="#" id="show-seen-spots" class="nav-item nav-link">Seen</a>
-                    <a href="#" id="show-unseen-spots" class="nav-item nav-link">Unseen</a>
+                    <a href="#" id="show-all-spots" class="nav-item nav-link nav-button">All</a>
+                    <a href="#" id="show-seen-spots" class="nav-item nav-link nav-button">Seen</a>
+                    <a href="#" id="show-unseen-spots" class="nav-item nav-link nav-button">Unseen</a>
                 </div>
                 <a href="#" class="navbar-brand logo">
-                    <img src="/examples/images/logo.svg" height="28" alt="CoolBrand">
+                    <img src="/examples/images/logo.svg" height="28" alt="Spots">
                 </a>
                 <div class="navbar-nav ml-auto">
-                  <a href="#" id="sign-out" class="nav-item nav-link" tabindex="-1">Sign Out</a>
+                  <a href="#" id="sign-out" class="nav-item nav-link nav-button" tabindex="-1">Sign Out</a>
                 </div>
             </div>
 
@@ -79,13 +79,7 @@
 
         <p id="authenticated-message"></p>
 
-        <button type="button" class="btn btn-outline-success" id="create-new-spot">New Spot</button>
-
-        <button type="button" class="btn btn-outline-success" id="update-spot">Update Spot</button>
-
-        <!-- <button id="create-new-spot">New Spot</button>
-
-        <button id="update-spot">Update Spot</button> -->
+        <button type="button" class="btn btn-outline-success edit-button" id="create-new-spot">New Spot</button>
 
         <form id="update-spot-form" class="container">
           <label for="spot-id"><b>Spot ID</b></label>

@@ -20,7 +20,8 @@ const onSignInSuccess = function (response) {
   $('#change-password-form').hide()
   $('#new-spot-form').hide()
   $('#update-spot-form').hide()
-  $('#authenticated-message').text('Signed in!')
+  $('#delete-spot-form').hide()
+  $('#authenticated-message').text('Signed in.')
   resetForms()
 }
 
@@ -28,13 +29,13 @@ const onSignOutSuccess = function () {
   clear.clearSpotContainers()
   $('.authenticated').hide()
   $('.unauthenticated').show()
-  $('#unauthenticated-message').text('Signed out!')
+  $('#unauthenticated-message').text('Signed out.')
   resetForms()
 }
 
 const onChangePasswordSuccess = function (response) {
   $('#change-password-form').hide()
-  $('#authenticated-message').text('Password changed successfully!')
+  $('#authenticated-message').text('Password changed successfully.')
   resetForms()
 }
 

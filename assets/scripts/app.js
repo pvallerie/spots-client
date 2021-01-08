@@ -35,7 +35,31 @@ $(() => {
   $('#show-all-spots').on('click', spotEvents.onShowAllSpots)
   $('#show-seen-spots').on('click', spotEvents.onShowSeenSpots)
   $('#show-unseen-spots').on('click', spotEvents.onShowUnseenSpots)
+  $('#all').on('click', '.delete-spot', '.update-spot', () => {
+    $('#update-spot-form').hide()
+    $('#delete-spot-form').toggle()
+  })
+  $('#seen').on('click', '.delete-spot', '.update-spot', () => {
+    $('#update-spot-form').hide()
+    $('#delete-spot-form').toggle()
+  })
+  $('#unseen').on('click', '.delete-spot', '.update-spot', () => {
+    $('#update-spot-form').hide()
+    $('#delete-spot-form').toggle()
+  })
   $('#delete-spot-form').on('submit', spotEvents.onDeleteSpot)
-  $('#update-spot').on('click', () => $('#update-spot-form').toggle())
+  $('.update-spot').on('click', () => $('#update-spot-form').toggle())
+  $('#all').on('click', '.update-spot', () => {
+    $('#delete-spot-form').hide()
+    $('#update-spot-form').toggle()
+  })
+  $('#seen').on('click', '.update-spot', () => {
+    $('#delete-spot-form').hide()
+    $('#update-spot-form').toggle()
+  })
+  $('#unseen').on('click', '.update-spot', () => {
+    $('#delete-spot-form').hide()
+    $('#update-spot-form').toggle()
+  })
   $('#update-spot-form').on('submit', spotEvents.onUpdateSpot)
 })
