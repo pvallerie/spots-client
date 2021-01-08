@@ -1,1 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
+
+#unauthenticated-nav {
+  height: 50px;
+}
+
+.logo {
+  position: absolute;
+  left: 45%;
+}
+
+.spot-container {
+  width: 100%;
+}
+
+.spot {
+  border: 1px solid black;
+}

@@ -12,9 +12,18 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Spots</h1>
 
       <div class="unauthenticated">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light" id="unauthenticated-nav">
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <a href="#" class="navbar-brand logo">
+                    <img src="/examples/images/logo.svg" height="28" alt="CoolBrand">
+                </a>
+            </div>
+
+        </nav>
 
         <p id="unauthenticated-message"></p>
 
@@ -45,19 +54,33 @@
 
       <div class="authenticated">
 
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" id="show-all-spots" class="nav-item nav-link">All</a>
+                    <a href="#" id="show-seen-spots" class="nav-item nav-link">Seen</a>
+                    <a href="#" id="show-unseen-spots" class="nav-item nav-link">Unseen</a>
+                </div>
+                <a href="#" class="navbar-brand logo">
+                    <img src="/examples/images/logo.svg" height="28" alt="CoolBrand">
+                </a>
+                <div class="navbar-nav ml-auto">
+                  <a href="#" id="sign-out" class="nav-item nav-link" tabindex="-1">Sign Out</a>
+                </div>
+            </div>
+
+        </nav>
+
         <p id="authenticated-message"></p>
 
-        <button id="show-all-spots">All</button>
+        <button type="button" class="btn btn-outline-success" id="create-new-spot">New Spot</button>
 
-        <button id="show-seen-spots">Seen</button>
+        <button type="button" class="btn btn-outline-success" id="update-spot">Update Spot</button>
 
-        <button id="show-unseen-spots">Unseen</button>
+        <!-- <button id="create-new-spot">New Spot</button>
 
-        <button id="sign-out">Sign Out</button>
-
-        <button id="create-new-spot">New Spot</button>
-
-        <button id="update-spot">Update Spot</button>
+        <button id="update-spot">Update Spot</button> -->
 
         <form id="update-spot-form" class="container">
           <label for="spot-id"><b>Spot ID</b></label>
@@ -107,11 +130,13 @@
           <button type="submit">Create</button>
         </form>
 
-        <div id="all"></div>
+        <div class="container">
+          <div class="row spot-container" id="all"></div>
 
-        <div id="seen"></div>
+          <div class="row spot-container" id="seen"></div>
 
-        <div id="unseen"></div>
+          <div class="row spot-container" id="unseen"></div>
+        </div>
 
         <button id="change-password">Change Password</button>
 

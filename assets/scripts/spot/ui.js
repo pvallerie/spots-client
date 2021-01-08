@@ -20,8 +20,7 @@ const onCreateNewSpotSuccess = function (response) {
 const onShowAllSpotsSuccess = function (response) {
   const allHtmlText = response.spots.map(function (index) {
     return `
-      <div class="spot-conatiner">
-        <p>--------------</p>
+      <div class="spot col-4">
         <p class="name"> name: ${index.name}</p>
         <p class="location"> location: ${index.location}</p>
         <p class="notes"> notes: ${index.notes}</p>
@@ -42,8 +41,7 @@ const onShowAllSpotsSuccess = function (response) {
 const onShowSeenSpotsSuccess = function (response) {
   const allHtmlText = response.spots.filter(spot => spot.seen === true).map(function (index) {
     return `
-        <div class="spot-conatiner">
-          <p>--------------</p>
+        <div class="spot col-4">
           <p class="name"> name: ${index.name}</p>
           <p class="location"> location: ${index.location}</p>
           <p class="notes"> notes: ${index.notes}</p>
@@ -64,8 +62,7 @@ const onShowSeenSpotsSuccess = function (response) {
 const onShowUnseenSpotsSuccess = function (response) {
   const allHtmlText = response.spots.filter(spot => spot.seen === false).map(function (index) {
     return `
-        <div class="spot-conatiner">
-          <p>--------------</p>
+        <div class="spot col-4">
           <p class="name"> name: ${index.name}</p>
           <p class="location"> location: ${index.location}</p>
           <p class="notes"> notes: ${index.notes}</p>
@@ -78,7 +75,7 @@ const onShowUnseenSpotsSuccess = function (response) {
   $('.all').hide()
   $('.seen').hide()
   $('.unseen').show()
-  $('#authenticated-message').text('Seen spots shown!')
+  $('#authenticated-message').text('Unseen spots shown!')
   $('#unseen').append(allHtmlText)
   resetForms()
 }
