@@ -50,19 +50,6 @@
           <button type="submit" class="btn btn-primary auth-button">Submit</button>
         </form>
 
-        <!-- <form id="sign-up-form" class="container">
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="credentials[email]" required>
-
-          <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="credentials[password]" required>
-
-          <label for="password-confirmation"><b>Password Confirmation</b></label>
-          <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]" required>
-
-          <button type="submit">Create Account</button>
-        </form> -->
-
         <form id="sign-in-form" class="auth-form">
           <div class="form-group">
             <label for="email">Email address</label>
@@ -158,16 +145,18 @@
           <div class="row spot-container" id="unseen"></div>
         </div>
 
-        <button id="change-password">Change Password</button>
+        <button type="button" class="btn btn-outline-success edit-button" id="change-password">Change Password</button>
 
-        <form id="change-password-form" class="container">
-          <label for="old-password"><b>Old Password</b></label>
-          <input type="password" placeholder="Old Password" name="passwords[old]" required>
-
-          <label for="new-password"><b>New Password</b></label>
-          <input type="password" placeholder="New Password" name="passwords[new]" required>
-
-          <button type="submit">Change Password</button>
+        <form id="change-password-form" class="auth-form">
+          <div class="form-group">
+            <label for="old-password">Old Password</label>
+            <input type="password" class="form-control" name="passwords[old]" required>
+          </div>
+          <div class="form-group">
+            <label for="new-password">New Password</label>
+            <input type="password" class="form-control" name="passwords[new]" required>
+          </div>
+          <button type="submit" class="btn btn-primary auth-button">Submit</button>
         </form>
 
       </div>
