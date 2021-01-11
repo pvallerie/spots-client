@@ -15,10 +15,12 @@ $(() => {
 
   // auth:
   $('#sign-up').on('click', () => {
+    $('#unauthenticated-message').text('')
     $('#sign-up-form').toggle()
     $('#sign-in-form').hide()
   })
   $('#sign-in').on('click', () => {
+    $('#unauthenticated-message').text('')
     $('#sign-in-form').toggle()
     $('#sign-up-form').hide()
   })
