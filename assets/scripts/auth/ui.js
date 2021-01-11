@@ -8,6 +8,8 @@ const resetForms = function () {
 
 // successes:
 const onSignUpSuccess = function (response) {
+  $('#sign-up-form').hide()
+  $('#sign-in-form').show()
   $('#unauthenticated-message').text('Account created!')
   resetForms()
 }

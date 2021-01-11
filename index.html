@@ -32,7 +32,25 @@
 
         <p id="unauthenticated-message"></p>
 
-        <form id="sign-up-form" class="container">
+
+        <form id="sign-up-form" class="auth-form">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="credentials[email]" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" required>
+          </div>
+          <div class="form-group">
+            <label for="password-confirmation">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password_confirmation]" required>
+          </div>
+          <button type="submit" class="btn btn-primary auth-button">Submit</button>
+        </form>
+
+        <!-- <form id="sign-up-form" class="container">
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="credentials[email]" required>
 
@@ -43,9 +61,9 @@
           <input type="password" placeholder="Confirm Password" name="credentials[password_confirmation]" required>
 
           <button type="submit">Create Account</button>
-        </form>
+        </form> -->
 
-        <form id="sign-in-form">
+        <form id="sign-in-form" class="auth-form">
           <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="credentials[email]" required>
