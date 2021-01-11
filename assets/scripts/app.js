@@ -31,35 +31,52 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
 
   // spots:
-  $('#create-new-spot').on('click', () => $('#new-spot-form').toggle())
+  $('#create-new-spot').on('click', () => {
+    $('#authenticated-message').hide()
+    $('#update-spot-form').hide()
+    $('#delete-spot-form').hide()
+    $('#new-spot-form').toggle()
+  })
   // $('#create-new-spot').toggle('#new-spot-form')
   $('#new-spot-form').on('submit', spotEvents.onCreateNewSpot)
   $('#show-all-spots').on('click', spotEvents.onShowAllSpots)
   $('#show-seen-spots').on('click', spotEvents.onShowSeenSpots)
   $('#show-unseen-spots').on('click', spotEvents.onShowUnseenSpots)
   $('#all').on('click', '.delete-spot', '.update-spot', () => {
+    $('#authenticated-message').hide()
+    $('#new-spot-form').hide()
     $('#update-spot-form').hide()
     $('#delete-spot-form').toggle()
   })
   $('#seen').on('click', '.delete-spot', '.update-spot', () => {
+    $('#authenticated-message').hide()
+    $('#new-spot-form').hide()
     $('#update-spot-form').hide()
     $('#delete-spot-form').toggle()
   })
   $('#unseen').on('click', '.delete-spot', '.update-spot', () => {
+    $('#authenticated-message').hide()
+    $('#new-spot-form').hide()
     $('#update-spot-form').hide()
     $('#delete-spot-form').toggle()
   })
   $('#delete-spot-form').on('submit', spotEvents.onDeleteSpot)
   $('.update-spot').on('click', () => $('#update-spot-form').toggle())
   $('#all').on('click', '.update-spot', () => {
+    $('#authenticated-message').hide()
+    $('#new-spot-form').hide()
     $('#delete-spot-form').hide()
     $('#update-spot-form').toggle()
   })
   $('#seen').on('click', '.update-spot', () => {
+    $('#authenticated-message').hide()
+    $('#new-spot-form').hide()
     $('#delete-spot-form').hide()
     $('#update-spot-form').toggle()
   })
   $('#unseen').on('click', '.update-spot', () => {
+    $('#authenticated-message').hide()
+    $('#new-spot-form').hide()
     $('#delete-spot-form').hide()
     $('#update-spot-form').toggle()
   })

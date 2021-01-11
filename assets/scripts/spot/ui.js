@@ -13,6 +13,7 @@ const onNewSpotSuccess = function () {
 
 const onCreateNewSpotSuccess = function (response) {
   $('#new-spot-form').hide()
+  $('#authenticated-message').show()
   $('#authenticated-message').text('New spot created.')
   resetForms()
 }
@@ -26,14 +27,15 @@ const onShowAllSpotsSuccess = function (response) {
         <p class="notes"> notes: ${index.notes}</p>
         <p class="seen"> seen: ${index.seen}</p>
         <p class="ID"> ID: ${index._id}</p>
-        <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}}">Edit</button>
-        <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}}">Delete</button>
+        <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}">Edit</button>
+        <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}">Delete</button>
       </div>
     `
   })
   clear.clearSpotContainers()
   $('.seen').hide()
   $('.unseen').hide()
+  $('#authenticated-message').show()
   $('#authenticated-message').text('All spots shown.')
   console.log(response)
   $('#all').append(allHtmlText)
@@ -52,8 +54,8 @@ const onShowSeenSpotsSuccess = function (response) {
           <p class="notes"> notes: ${index.notes}</p>
           <p class="seen"> seen: ${index.seen}</p>
           <p class="ID"> ID: ${index._id}</p>
-          <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}}">Edit</button>
-          <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}}">Delete</button>
+          <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}">Edit</button>
+          <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}">Delete</button>
         </div>
     `
   })
@@ -61,6 +63,7 @@ const onShowSeenSpotsSuccess = function (response) {
   $('.all').hide()
   $('.seen').show()
   $('.unseen').hide()
+  $('#authenticated-message').show()
   $('#authenticated-message').text('Seen spots shown.')
   $('#seen').append(allHtmlText)
   $('#show-all-spots').removeClass('active')
@@ -78,8 +81,8 @@ const onShowUnseenSpotsSuccess = function (response) {
           <p class="notes"> notes: ${index.notes}</p>
           <p class="seen"> seen: ${index.seen}</p>
           <p class="ID"> ID: ${index._id}</p>
-          <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}}">Edit</button>
-          <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}}">Delete</button>
+          <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}">Edit</button>
+          <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}">Delete</button>
         </div>
     `
   })
@@ -87,6 +90,7 @@ const onShowUnseenSpotsSuccess = function (response) {
   $('.all').hide()
   $('.seen').hide()
   $('.unseen').show()
+  $('#authenticated-message').show()
   $('#authenticated-message').text('Unseen spots shown.')
   $('#unseen').append(allHtmlText)
   $('#show-all-spots').removeClass('active')
@@ -96,12 +100,14 @@ const onShowUnseenSpotsSuccess = function (response) {
 }
 
 const onDeleteSpotSuccess = function (response) {
+  $('#authenticated-message').show()
   $('#authenticated-message').text('Spot deleted.')
   // events.onShowAllSpots()
   resetForms()
 }
 
 const onUpdateSpotSuccess = function (response) {
+  $('#authenticated-message').show()
   $('#authenticated-message').text('Spot updated.')
   $('#update-spot-form').hide()
   // events.onShowAllSpots()
@@ -110,15 +116,25 @@ const onUpdateSpotSuccess = function (response) {
 
 // errors:
 const onCreateNewSpotError = function (error) {
+  $('#authenticated-message').show()
   $('#authenticated-message').text('Error: ', error.responseJSON.message)
 }
 
 const onShowAllSpotsError = function (error) {
+  $('#authenticated-message').show()
   $('#authenticated-message').text('Error: ', error.responseJSON.message)
 }
 
 const onDeleteSpotError = function (error) {
-  $('#authenticated-message').text('Error: ', error.responseJSON.message)
+  $('#authenticated-message').show()
+  $('#authenticated-message').text(`Error: ${error.responseJSON.message}`)
+  resetForms()
+}
+
+const onUpdateSpotError = function (error) {
+  $('#authenticated-message').show()
+  $('#authenticated-message').text(`Error: ${error.responseJSON.message}`)
+  resetForms()
 }
 
 module.exports = {
@@ -131,5 +147,6 @@ module.exports = {
   onUpdateSpotSuccess,
   onCreateNewSpotError,
   onShowAllSpotsError,
-  onDeleteSpotError
+  onDeleteSpotError,
+  onUpdateSpotError
 }

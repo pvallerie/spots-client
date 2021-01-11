@@ -9,28 +9,28 @@ const onCreateNewSpot = function (event) {
   const data = getFormFields(event.target)
   api.createNewSpot(data)
     .then(ui.onCreateNewSpotSuccess)
-    .then(ui.onCreateNewSpotError)
+    .catch(ui.onCreateNewSpotError)
 }
 
 const onShowAllSpots = function (event) {
   event.preventDefault()
   api.showAllSpots()
     .then(ui.onShowAllSpotsSuccess)
-    .then(ui.onShowAllSpotsError)
+    .catch(ui.onShowAllSpotsError)
 }
 
 const onShowSeenSpots = function (event) {
   event.preventDefault()
   api.showAllSpots()
     .then(ui.onShowSeenSpotsSuccess)
-    .then(ui.onShowSeenSpotsError)
+    .catch(ui.onShowSeenSpotsError)
 }
 
 const onShowUnseenSpots = function (event) {
   event.preventDefault()
   api.showAllSpots()
     .then(ui.onShowUnseenSpotsSuccess)
-    .then(ui.onShowUnseenSpotsError)
+    .catch(ui.onShowUnseenSpotsError)
 }
 
 const onDeleteSpot = function (event) {
@@ -39,7 +39,7 @@ const onDeleteSpot = function (event) {
   console.log(data.spot._id)
   api.deleteSpot(data)
     .then(ui.onDeleteSpotSuccess)
-    .then(ui.onDeleteSpotError)
+    .catch(ui.onDeleteSpotError)
 }
 
 const onUpdateSpot = function (event) {
@@ -47,7 +47,7 @@ const onUpdateSpot = function (event) {
   const data = getFormFields(event.target)
   api.updateSpot(data)
     .then(ui.onUpdateSpotSuccess)
-    .then(ui.onUpdateSpotError)
+    .catch(ui.onUpdateSpotError)
 }
 
 module.exports = {
