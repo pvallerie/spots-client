@@ -51,12 +51,24 @@ border-color: $button-color;
 transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.auth-button {
+color: $button-color;
+border-color: $button-color;
+background-color: $button-background-color;
+transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
 .edit-button:hover {
   background-color: $button-color;
   border-color: $button-color;
 }
 
 .delete-button:hover {
+  background-color: $button-color;
+  border-color: $button-color;
+}
+
+.auth-button:hover {
   background-color: $button-color;
   border-color: $button-color;
 }
@@ -76,4 +88,14 @@ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-
   // margin-right: 0.1rem;
   // margin-bottom: 0.375rem;
   // margin-left: 0.1rem;
+}
+
+#sign-in-form {
+display: block;
+background-color: $transparent-black;
+border: 1px solid $transparent-black;
+border-radius: 3px;
+padding: 50px;
+margin: 50px 30% 10px 30%;
+color: $form-font-color;
 }
