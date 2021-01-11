@@ -46,6 +46,7 @@ const onSignUpError = function (error) {
 }
 
 const onSignInError = function (error) {
+  $('#unauthenticated-message').show()
   $('#unauthenticated-message').text('Error: ' + error.responseJSON.message)
   resetForms()
 }
