@@ -103,5 +103,16 @@ margin: 50px 30% 10px 30%;
 color: $form-font-color;
 }
 
+.spot-form {
+display: block;
+background-color: $form-background-color;
+border: 1px solid $form-background-color;
+border-radius: 3px;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+padding: 50px;
+margin: 50px 30% 10px 30%;
+color: $form-font-color;
+}
+
 .form-title {
 }
