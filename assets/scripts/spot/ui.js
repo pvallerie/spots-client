@@ -27,8 +27,8 @@ const onShowAllSpotsSuccess = function (response) {
         <p class="notes"> notes: ${index.notes}</p>
         <p class="seen"> seen: ${index.seen}</p>
         <p class="ID"> ID: ${index._id}</p>
-        <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}">Edit</button>
-        <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}">Delete</button>
+        <button type="button" class="btn btn-outline-success update-spot spot-button" data="${index._id}">Edit</button>
+        <button type="button" class="btn btn-outline-success delete-spot spot-button" data="${index._id}">Delete</button>
       </div>
     `
   })
@@ -54,8 +54,8 @@ const onShowSeenSpotsSuccess = function (response) {
           <p class="notes"> notes: ${index.notes}</p>
           <p class="seen"> seen: ${index.seen}</p>
           <p class="ID"> ID: ${index._id}</p>
-          <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}">Edit</button>
-          <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}">Delete</button>
+          <button type="button" class="btn btn-outline-success update-spot spot-button" data="${index._id}">Edit</button>
+          <button type="button" class="btn btn-outline-success delete-spot spot-button" data="${index._id}">Delete</button>
         </div>
     `
   })
@@ -81,8 +81,8 @@ const onShowUnseenSpotsSuccess = function (response) {
           <p class="notes"> notes: ${index.notes}</p>
           <p class="seen"> seen: ${index.seen}</p>
           <p class="ID"> ID: ${index._id}</p>
-          <button type="button" class="btn btn-outline-success update-spot edit-button" data="${index._id}">Edit</button>
-          <button type="button" class="btn btn-outline-success delete-spot delete-button" data="${index._id}">Delete</button>
+          <button type="button" class="btn btn-outline-success update-spot spot-button" data="${index._id}">Edit</button>
+          <button type="button" class="btn btn-outline-success delete-spot spot-button" data="${index._id}">Delete</button>
         </div>
     `
   })

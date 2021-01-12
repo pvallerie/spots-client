@@ -39,15 +39,10 @@
   font-family: $spot-logo-font;
 }
 
-.edit-button {
+.spot-button {
 color: $button-color;
 border-color: $button-color;
-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.delete-button {
-color: $button-color;
-border-color: $button-color;
+background-color: $button-background-color;
 transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -63,7 +58,7 @@ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-
   border-color: $button-color;
 }
 
-.delete-button:hover {
+.spot-button:hover {
   background-color: $button-color;
   border-color: $button-color;
 }
@@ -110,7 +105,7 @@ border: 1px solid $form-background-color;
 border-radius: 3px;
 box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 padding: 50px;
-margin: 50px 30% 10px 30%;
+margin: 50px 30% 20px 30%;
 color: $form-font-color;
 }
 
