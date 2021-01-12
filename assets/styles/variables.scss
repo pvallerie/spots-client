@@ -4,11 +4,12 @@ $endode-sans-semi-expanded:'Encode Sans Semi Expanded', sans-serif;
 $dark-green: #264e2c;
 $unsaturated-dark-green: #A8B8AA;
 $transparent-black: rgba(0,0,0,0.75);
+$nav-bar-gray: #f8f9fa;
 
 $spot-logo-font: $endode-sans-semi-expanded;
 $spot-border-color: $dark-green;
 $button-color: $dark-green;
 $button-background-color: $unsaturated-dark-green;
 $nav-color: $dark-green;
-$form-background-color: $transparent-black;
-$form-font-color: white;
+$form-background-color: $nav-bar-gray;
+$form-font-color: black;
