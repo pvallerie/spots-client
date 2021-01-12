@@ -102,7 +102,7 @@ const onShowUnseenSpotsSuccess = function (response) {
 const onDeleteSpotSuccess = function (response) {
   $('#authenticated-message').show()
   $('#authenticated-message').text('Spot deleted.')
-  // events.onShowAllSpots()
+  $('#delete-spot-form').hide()
   resetForms()
 }
 

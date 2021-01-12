@@ -138,34 +138,21 @@
           <button type="submit" class="btn btn-primary spot-button">Submit</button>
         </form>
 
-        <!-- <form id="update-spot-form" class="spot-form">
-          <label for="spot-id"><b>Spot ID</b></label>
-          <input type="text" placeholder="Spot ID" name="spot[_id]" required>
-
-          <label for="name"><b>Name</b></label>
-          <input type="text" placeholder="Name" name="spot[name]">
-
-          <label for="location"><b>Location</b></label>
-          <input type="text" placeholder="Location" name="spot[location]">
-
-          <label for="notes"><b>Notes</b></label>
-          <input type="text" placeholder="Notes" name="spot[notes]">
-
-          <label for="seen"><b>Seen</b></label>
-          <input type="checkbox" value="true" placeholder="Seen" name="spot[seen]">
-
-          <label for="unseen"><b>Unseen</b></label>
-          <input type="checkbox" value="false" placeholder="Seen" name="spot[seen]">
-
-          <button type="submit">Update</button>
-        </form> -->
-
         <form id="delete-spot-form" class="spot-form">
+          <h3 class="form-title">Delete Spot</h3>
+          <div class="form-group">
+            <label for="spot-id"><b>Spot ID</b></label>
+            <input type="text" class="form-control form-control-sm" name="spot[_id]" required>
+          </div>
+          <button type="submit" class="btn btn-primary spot-button">Submit</button>
+        </form>
+
+        <!-- <form id="delete-spot-form" class="spot-form">
           <label for="spot-id"><b>Spot ID</b></label>
           <input type="text" placeholder="Spot ID" name="spot[_id]" required>
 
           <button type="submit">Delete</button>
-        </form>
+        </form> -->
 
         <div class="container">
           <div class="row spot-container" id="all"></div>
