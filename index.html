@@ -131,9 +131,13 @@
             <label for="notes"><b>Notes</b></label>
             <textarea class="form-control" id="validationTextarea" name="spot[notes]"></textarea>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" value="true" name="spot[seen]" id="exampleCheck1">
-            <label for="seen" class="form-check-label">Seen</label>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="spot[seen]" class="custom-control-input" value="true">
+            <label class="custom-control-label" for="customRadio1">Seen</label>
+          </div>
+          <div class="custom-control custom-radio" id="bottom-update-radio">
+            <input type="radio" id="customRadio2" name="spot[seen]" class="custom-control-input" value="false">
+            <label class="custom-control-label" for="customRadio2">Unseen</label>
           </div>
           <button type="submit" class="btn btn-primary spot-button">Submit</button>
         </form>
@@ -146,13 +150,6 @@
           </div>
           <button type="submit" class="btn btn-primary spot-button">Submit</button>
         </form>
-
-        <!-- <form id="delete-spot-form" class="spot-form">
-          <label for="spot-id"><b>Spot ID</b></label>
-          <input type="text" placeholder="Spot ID" name="spot[_id]" required>
-
-          <button type="submit">Delete</button>
-        </form> -->
 
         <div class="container">
           <div class="row spot-container" id="all"></div>

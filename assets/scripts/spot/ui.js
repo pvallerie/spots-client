@@ -37,7 +37,6 @@ const onShowAllSpotsSuccess = function (response) {
   $('.unseen').hide()
   $('#authenticated-message').show()
   $('#authenticated-message').text('All spots shown.')
-  console.log(response)
   $('#all').append(allHtmlText)
   $('#show-all-spots').addClass('active')
   $('#show-seen-spots').removeClass('active')

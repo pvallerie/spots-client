@@ -36,7 +36,6 @@ const onShowUnseenSpots = function (event) {
 const onDeleteSpot = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data.spot._id)
   api.deleteSpot(data)
     .then(ui.onDeleteSpotSuccess)
     .catch(ui.onDeleteSpotError)
