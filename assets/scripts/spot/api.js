@@ -22,9 +22,19 @@ const showAllSpots = function (data) {
   })
 }
 
+// const deleteSpot = function (data) {
+//   return $.ajax({
+//     url: config.apiUrl + '/spots/' + data.spot._id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
+
 const deleteSpot = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/spots/' + data.spot._id,
+    url: config.apiUrl + '/spots/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token

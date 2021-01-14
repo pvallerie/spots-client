@@ -33,9 +33,17 @@ const onShowUnseenSpots = function (event) {
     .catch(ui.onShowUnseenSpotsError)
 }
 
+// const onDeleteSpot = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   api.deleteSpot(data)
+//     .then(ui.onDeleteSpotSuccess)
+//     .catch(ui.onDeleteSpotError)
+// }
+
 const onDeleteSpot = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
+  const data = $(this).data('spot-id')
   api.deleteSpot(data)
     .then(ui.onDeleteSpotSuccess)
     .catch(ui.onDeleteSpotError)
