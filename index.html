@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Spots</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <div class="unauthenticated">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light nav" id="unauthenticated-nav">
+
+            <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
+                <div class="navbar-nav">
+                    <a href="#" id="sign-up" class="nav-item nav-link">Create Account</a>
+                    <a href="#" id="sign-in" class="nav-item nav-link">Sign In</a>
+                </div>
+
+                <a href="#" class="navbar-brand logo">
+                    <h2>Spots</h2>
+                </a>
+            <!-- </div> -->
+
+        </nav>
+
+        <p id="unauthenticated-message"></p>
+
+
+        <form id="sign-up-form" class="auth-form">
+          <h3 class="form-title">Sign Up</h3>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="credentials[email]" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" required>
+          </div>
+          <div class="form-group">
+            <label for="password-confirmation">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password_confirmation]" required>
+          </div>
+          <button type="submit" class="btn btn-primary auth-button">Submit</button>
+        </form>
+
+        <form id="sign-in-form" class="auth-form">
+          <h3 class="form-title">Sign In</h3>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="credentials[email]" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="credentials[password]" required>
+          </div>
+          <button type="submit" class="btn btn-primary auth-button">Submit</button>
+        </form>
+
+      </div>
+
+      <div class="authenticated">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light nav">
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" id="show-all-spots" class="nav-item nav-link nav-button">All</a>
+                    <a href="#" id="show-seen-spots" class="nav-item nav-link nav-button">Seen</a>
+                    <a href="#" id="show-unseen-spots" class="nav-item nav-link nav-button">Unseen</a>
+                </div>
+                <a href="#" class="navbar-brand logo">
+                    <h2>Spots</h2>
+                </a>
+                <div class="navbar-nav ml-auto">
+                  <a href="#" id="sign-out" class="nav-item nav-link nav-button" tabindex="-1">Sign Out</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <p id="authenticated-message"></p>
+
+        <button type="button" class="btn btn-outline-success spot-button" id="create-new-spot">New Spot</button>
+
+
+        <form id="new-spot-form" class="spot-form">
+          <h3 class="form-title">New Spot</h3>
+          <div class="form-group">
+            <label for="name"><b>Name</b></label>
+            <input type="text" class="form-control form-control-sm" name="spot[name]" required>
+          </div>
+          <div class="form-group">
+            <label for="location"><b>Location</b></label>
+            <input type="text" class="form-control form-control-sm" name="spot[location]" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="notes"><b>Notes</b></label>
+            <textarea class="form-control" id="validationTextarea" name="spot[notes]" required></textarea>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" value="true" name="spot[seen]" id="exampleCheck1">
+            <label for="seen" class="form-check-label">Seen</label>
+          </div>
+          <button type="submit" class="btn btn-primary spot-button">Submit</button>
+        </form>
+
+        <form id="update-spot-form" class="spot-form">
+          <h3 class="form-title">Update Spot</h3>
+          <div class="form-group">
+            <label for="spot-id"><b>Spot ID</b></label>
+            <input type="text" class="form-control form-control-sm" name="spot[_id]" required>
+          </div>
+          <div class="form-group">
+            <label for="name"><b>Name</b></label>
+            <input type="text" class="form-control form-control-sm" name="spot[name]">
+          </div>
+          <div class="form-group">
+            <label for="location"><b>Location</b></label>
+            <input type="text" class="form-control" name="spot[location]">
+          </div>
+          <div class="form-group mb-3">
+            <label for="notes"><b>Notes</b></label>
+            <textarea class="form-control" id="validationTextarea" name="spot[notes]"></textarea>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="spot[seen]" class="custom-control-input" value="true">
+            <label class="custom-control-label" for="customRadio1">Seen</label>
+          </div>
+          <div class="custom-control custom-radio" id="bottom-update-radio">
+            <input type="radio" id="customRadio2" name="spot[seen]" class="custom-control-input" value="false">
+            <label class="custom-control-label" for="customRadio2">Unseen</label>
+          </div>
+          <button type="submit" class="btn btn-primary spot-button">Submit</button>
+        </form>
+
+        <form id="delete-spot-form" class="spot-form">
+          <h3 class="form-title">Delete Spot</h3>
+          <div class="form-group">
+            <label for="spot-id"><b>Spot ID</b></label>
+            <input type="text" class="form-control form-control-sm" name="spot[_id]" required>
+          </div>
+          <button type="submit" class="btn btn-primary spot-button">Submit</button>
+        </form>
+
+        <div class="container">
+          <div class="row spot-container" id="all"></div>
+
+          <div class="row spot-container" id="seen"></div>
+
+          <div class="row spot-container" id="unseen"></div>
+        </div>
+
+        <button type="button" class="btn btn-outline-success auth-button" id="change-password">Change Password</button>
+
+        <form id="change-password-form" class="auth-form">
+          <h3 class="form-title">Change Password</h3>
+          <div class="form-group">
+            <label for="old-password">Old Password</label>
+            <input type="password" class="form-control" name="passwords[old]" required>
+          </div>
+          <div class="form-group">
+            <label for="new-password">New Password</label>
+            <input type="password" class="form-control" name="passwords[new]" required>
+          </div>
+          <button type="submit" class="btn btn-primary auth-button">Submit</button>
+        </form>
+
+      </div>
+
+    </body>
+</html>
